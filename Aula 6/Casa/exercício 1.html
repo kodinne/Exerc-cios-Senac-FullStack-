@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+      let votos1 = 0;
+let votos2 = 0;
+let votos3 = 0;
+let votosNulo = 0;
+let votosBranco = 0;
+let totalVotos = 0;
+
+let opcao = prompt("Selecione seu candidato:\n1 - Jair Rodrigues\n2 - Carlos Luz\n3 - Neves Rocha\n4 - Nulo\n5 - Branco\n6 - Encerrar votação");
+
+while (opcao !== "6") {
+    if (opcao === "1") {
+        votos1++;
+    } else if (opcao === "2") {
+        votos2++;
+    } else if (opcao === "3") {
+        votos3++;
+    } else if (opcao === "4") {
+        votosNulo++;
+    } else if (opcao === "5") {
+        votosBranco++;
+    } else {
+        alert("Opção inválida! Digite um número de 1 a 6.");
+    }
+
+    totalVotos++; 
+
+    opcao = prompt("Selecione seu candidato:\n1 - Jair Rodrigues\n2 - Carlos Luz\n3 - Neves Rocha\n4 - Nulo\n5 - Branco\n6 - Encerrar votação");
+}
+
+let porcentNulo = (votosNulo / totalVotos) * 100;
+let porcentBranco = (votosBranco / totalVotos) * 100;
+
+let vencedor = "";
+if (votos1 > votos2 && votos1 > votos3) {
+    vencedor = "Jair Rodrigues";
+} else if (votos2 > votos1 && votos2 > votos3) {
+    vencedor = "Carlos Luz";
+} else if (votos3 > votos1 && votos3 > votos2) {
+    vencedor = "Neves Rocha";
+} else {
+    vencedor = "Empate entre candidatos";
+}
+
+document.write("Resultado da eleição:<br>");
+document.write("Jair Rodrigues: " + votos1 + " votos<br>");
+document.write("Carlos Luz: " + votos2 + " votos<br>");
+document.write("Neves Rocha: " + votos3 + " votos<br>");
+document.write("Nulos: " + votosNulo + " (" + porcentNulo.toFixed(2) + "%)<br>");
+document.write("Brancos: " + votosBranco + " (" + porcentBranco.toFixed(2) + "%)<br>");
+document.write("Vencedor: " + vencedor);
+
+    </script>
+</body>
+
+</html>

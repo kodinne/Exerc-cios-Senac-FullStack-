@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Desenvolva uma função que receba um número como parâmetro e verifique se ele é par ou ímpar. Retorne true se for par e false se for ímpar
+        let numero = prompt("Digite um número");
+        numero = parseInt(numero);
+
+        function ehPar(numero) {
+            if (numero % 2 === 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+
+        if (isNaN(numero)) {
+            document.write("Por favor, digite um número válido.");
+        } else {
+            if (ehPar(numero)) {
+                document.write(numero + " é par.");
+            } else {
+                document.write(numero + " é ímpar.");
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

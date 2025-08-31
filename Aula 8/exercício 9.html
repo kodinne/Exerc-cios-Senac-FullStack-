@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let pessoas = [];
+
+        for (let i = 0; i < 6; i++) {
+            let nome = prompt("Digite o nome da " + (i + 1) + "ª pessoa:");
+            let telefone = prompt("Digite o telefone de " + nome + ":");
+            let cidade = prompt("Digite a cidade onde " + nome + " mora:");
+
+            if (nome === "" || telefone === "" || cidade === "") {
+                alert("Algum campo ficou vazio!.");
+                i--; 
+            } else {
+                pessoas.push({
+                    nome: nome,
+                    telefone: telefone,
+                    cidade: cidade.trim().toLowerCase() // normaliza pra evitar erro com "niterói", " Niterói ", etc.
+                });
+            }
+        }
+
+        document.write("<h2>Pessoas que moram em Niterói:</h2>");
+
+        let encontrou = false;
+
+        for (let i = 0; i < pessoas.length; i++) {
+            if (pessoas[i].cidade === "niterói") {
+                document.write("<p>" + pessoas[i].nome + " - Tel: " + pessoas[i].telefone + "</p>");
+                encontrou = true;
+            }
+        }
+
+        if (!encontrou) {
+            document.write("<p>Ninguém mora em Niterói</p>");
+        }
+
+    </script>
+</body>
+
+</html>

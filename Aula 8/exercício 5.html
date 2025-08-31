@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let numeros = [];
+
+        for (let i = 0; i < 8; i++) {
+            let numero = prompt("Digite o " + (i + 1) + "º número:");
+            numero = parseInt(numero);
+
+            if (isNaN(numero)) {
+                alert("Isso não é número!");
+                i--;
+            } else {
+                numeros.push(numero);
+            }
+        }
+
+        let maior = numeros[0];
+        let menor = numeros[0];
+
+        for (let i = 1; i < numeros.length; i++) {
+            if (numeros[i] > maior) {
+                maior = numeros[i];
+            }
+            if (numeros[i] < menor) {
+                menor = numeros[i];
+            }
+        }
+
+        
+        document.write("<h2>Números digitados:</h2>");
+        document.write("<p>" + numeros.join(", ") + "</p>");
+
+        document.write("<h2>Resultado:</h2>");
+        document.write("<p>Maior número: " + maior + "</p>");
+        document.write("<p>Menor número: " + menor + "</p>");
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Peça ao usuário para digitar um número inteiro e verifique se ele é primo (ou seja, divisível apenas por 1 e por ele mesmo).  
+
+        let numero = parseInt(prompt("Digite umnúmero inteiro: "));
+        let totalDivisores = 0;
+
+        for (let i = 1; i <= numero; i++) {
+            if (numero % i === 0) {
+                totalDivisores++;
+            }
+        } if (totalDivisores === 2) {
+            document.write(numero, " é um número primo");
+
+        } else {
+            document.write(numero, " não é um número primo")
+        }
+    </script>
+</body>
+
+</html>

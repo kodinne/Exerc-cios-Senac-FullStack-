@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //. Construir uma página na qual o usuário digitará sete números e o programa escreverá, na tela,vquantos deles são pares e quantos são ímpares.
+
+        let numeros = [];
+        let pares = 0;
+        let impares = 0;
+
+        for (let i = 0; i < 7; i++) {
+            let numero = prompt("Digite o " + (i + 1) + "º número:");
+            numero = parseInt(numero);
+
+            if (isNaN(numero)) {
+                alert("Isso não é um número válido!");
+                i--; 
+            } else {
+                numeros.push(numero);
+
+                if (numero % 2 === 0) {
+                    pares++;
+                } else {
+                    impares++;
+                }
+            }
+        }
+
+
+        document.write("<h2>Números digitados:</h2>");
+        document.write("<p>" + numeros.join(", ") + "</p>");
+
+        document.write("<h2>Resultado:</h2>");
+        document.write("<p>Quantidade de números pares: " + pares + "</p>");
+        document.write("<p>Quantidade de números ímpares: " + impares + "</p>");
+
+    </script>
+</body>
+
+</html>

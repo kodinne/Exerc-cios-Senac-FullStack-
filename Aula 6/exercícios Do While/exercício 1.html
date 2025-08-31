@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Faça um programa que implemente um menu onde o usuário deverá selecionar 1 ou 2. Caso seja inserido um número diferente, o programa deverá solicitar uma nova opção.  
+        //O programa deverá para quando for inserido um valor igual a 0
+
+        let opcao;
+
+        do {
+            opcao = prompt(
+                "Menu:\n" +
+                "1 - Opção 1\n" +
+                "2 - Opção 2\n" +
+                "0 - Sair\n" +
+                "Escolha uma opção:"
+            );
+
+            opcao = Number(opcao); // Converte string para número
+
+            if (opcao === 1) {
+                document.write("Você escolheu a opção 1<br>");
+            } else if (opcao === 2) {
+                document.write("Você escolheu a opção 2<br>");
+            } else if (opcao !== 0) {
+                document.write("Opção inválida, tente novamente<br>");
+            }
+
+        } while (opcao !== 0);
+
+        document.write("Programa encerrado.");
+
+    </script>
+
+</body>
+
+</html>

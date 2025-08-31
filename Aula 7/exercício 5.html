@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Faça um algoritmo que leia nome e duas notas de alunos: uma nota de prova e outra de recuperação.
+        //Este algoritmo deve analisar as duas notas e armazenar somente a maior nota no boletim.
+        //Ao final, imprima: Nome do aluno, Nota de prova, Nota de Recuperação e Nota Final no Boletim. ***Observação*** usem todos os recursos que vocês aprenderam, 
+        //inclusive as funtions
+
+        let aluno = prompt("Digite o nome do aluno:");
+        let alunoNota = parseFloat(prompt("Informe a nota do aluno:"));
+        let notaRecuperacao = parseFloat(prompt("Digite a nota da recuperação:"));
+
+        function obterMaiorNota(nota1, nota2, nota3) {
+            return nota1 > nota2 ? nota1 : nota2;
+        }
+        let notaFinal = obterMaiorNota(alunoNota, notaRecuperacao);
+        document.write("Boletim do Aluno: <br> ");
+        document.write("Nome do aluno: " + aluno + "<br>");
+        document.write("Nota da prova: " + alunoNota + "<br>");
+        document.write("Nota da recuperação: " + notaRecuperacao + "<br>");
+        document.write("Nota final no boletim: " + notaFinal);
+
+    </script>
+</body>
+
+</html>

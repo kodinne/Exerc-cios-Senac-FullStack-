@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //esenvolva uma função que calcule o valor de um produto com desconto. A função deve receber o valor original do produto e o percentual de desconto como parâmetros
+        //e retornar o valor com desconto aplicado. Utilize essa função para calcular o valor final de diferentes produtos
+        function calcularDesconto(valorOriginal, percentualDesconto) {
+            let valorDesconto = (valorOriginal * percentualDesconto) / 100;
+            let valorFinal = valorOriginal - valorDesconto;
+            return valorFinal; 
+        }
+
+        let valorOriginal = parseFloat(prompt("Digite o valor do produto:"));
+        let percentualDesconto = parseInt(prompt("Digite quantos % de desconto:"));
+
+        let valorComDesconto = calcularDesconto(valorOriginal, percentualDesconto);
+
+        document.write("O valor com desconto é: R$ " + valorComDesconto.toFixed(2));
+
+    </script>
+</body>
+
+</html>

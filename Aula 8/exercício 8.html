@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let alunos = [];
+
+        for (let i = 0; i < 5; i++) {
+            let nome = prompt("Digite o nome do " + (i + 1) + "º aluno:");
+            let media = prompt("Digite a média do " + nome + ":");
+            media = parseFloat(media);
+
+            if (nome === "" || isNaN(media)) {
+                alert("Nome vazio ou média inválida! Tente novamente.");
+                i--;
+            } else {
+                alunos.push({ nome: nome, media: media });
+            }
+        }
+
+        
+        document.write("<h2>Alunos com média maior ou igual a 6:</h2>");
+
+        let encontrouAlgum = false;
+
+        for (let i = 0; i < alunos.length; i++) {
+            if (alunos[i].media >= 6) {
+                document.write("<p>" + alunos[i].nome + " - Média: " + alunos[i].media + "</p>");
+                encontrouAlgum = true;
+            }
+        }
+
+        if (!encontrouAlgum) {
+            document.write("<p>Nenhum aluno passou!</p>");
+        }
+
+    </script>
+</body>
+
+</html>

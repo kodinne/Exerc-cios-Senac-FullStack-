@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let matriz = [
+            [1, 2, 3], // linha 0 
+            [4, 5, 6], // linha 1
+            [7, 8, 9]  // linha 2
+        ];
+
+        let matrizUsuario = []; // linha 3
+
+        for (let i = 0; i < 3; i++) {
+            let numero;
+            do {
+                let entrada = prompt(`Digite o ${i + 1}º número da nova linha:`);
+                numero = parseInt(entrada);
+
+                if (isNaN(numero)) {
+                    alert("Você deve digitar um número válido!");
+                }
+            } while (isNaN(numero)); 
+
+            matrizUsuario.push(numero); 
+        }
+
+        matriz.push(matrizUsuario);
+
+        // Mostrar a matriz no console
+        for (let linha = 0; linha < matriz.length; linha++) {
+            for (let coluna = 0; coluna < matriz[linha].length; coluna++) {
+                console.log(`Elemento na posição [${linha}][${coluna}] é ${matriz[linha][coluna]}`);
+            }
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

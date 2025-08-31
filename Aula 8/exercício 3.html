@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Construir um programa no qual o usuário digitará cinco estados brasileiros em um vetor e o programa irá exibir os valores que estão na posição 0, 2 e 4.
+
+        let estados = [];
+
+        for (let i = 0; i < 5; i++) {
+            let estado = prompt(`Digite o nome do estado ${i + 1}:`);
+            estados.push(estado);
+        }
+
+        document.write("Estados nas posições 0, 2 e 4:<br>");
+        document.write("Posição 0: " + estados[0] + "<br>");
+        document.write("Posição 2: " + estados[2] + "<br>");
+        document.write("Posição 4: " + estados[4] + "<br>");
+
+    </script>
+</body>
+
+</html>

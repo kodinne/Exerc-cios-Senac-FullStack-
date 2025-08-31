@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:_ApprovalStatus msdt:dt="string">0</mso:_ApprovalStatus>
+<mso:_ApprovalAssignedTo msdt:dt="string"></mso:_ApprovalAssignedTo>
+<mso:_ApprovalRespondedBy msdt:dt="string"></mso:_ApprovalRespondedBy>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+  <script>
+    let preco, taxaDesconto, valorDesconto, precoFinal;
+
+    preco = parseFloat(prompt("Informe o preço do produto"));
+   taxaDesconto= parseFloat(prompt("Informe o desconto(%)"));
+   valorDesconto = (preco*taxaDesconto) /100;
+   precoFinal = preco - valorDesconto;
+
+  document.write("Preço original R$ " + preco.toFixed(2) + "<br>")
+  document.write("Desconto de " + taxaDesconto.toFixed(2) + "%: R$ " + valorDesconto.toFixed(2) + "<br>");
+  document.write("Preço com desconto: R$ " + precoFinal.toFixed(2));
+
+  
+  </script>
+  
+</body>
+</html>

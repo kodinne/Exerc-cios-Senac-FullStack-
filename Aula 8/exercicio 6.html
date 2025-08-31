@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Construir um programa no qual o usuário digitará dez números e o programa deverá calcular quantos deles são maiores que 10.
+
+        let numeros = [];
+        let maioresQue10 = 0;
+
+        for (let i = 0; i < 10; i++) {
+            let numero = prompt("Digite o " + (i + 1) + "º número:");
+            numero = parseFloat(numero);
+
+            if (isNaN(numero)) {
+                alert("Isso não é um número válido!");
+                i--; 
+            } else {
+                numeros.push(numero);
+                if (numero > 10) {
+                    maioresQue10 = maioresQue10 + 1; 
+                }
+            }
+        }
+
+        
+        document.write("<h2>Números digitados:</h2>");
+        document.write("<p>" + numeros.join(", ") + "</p>");
+
+        document.write("<h2>Resultado:</h2>");
+        document.write("<p>Quantidade de números maiores que 10: " + maioresQue10 + "</p>");
+
+
+
+    </script>
+</body>
+
+</html>

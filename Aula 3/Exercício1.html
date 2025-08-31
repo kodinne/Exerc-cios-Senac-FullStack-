@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:_ApprovalStatus msdt:dt="string">0</mso:_ApprovalStatus>
+<mso:_ApprovalAssignedTo msdt:dt="string"></mso:_ApprovalAssignedTo>
+<mso:_ApprovalRespondedBy msdt:dt="string"></mso:_ApprovalRespondedBy>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <script>
+        /*
+         FAÇA UM ALGORITMO QUE LEIA O PREÇO DE UM PRODUTO E
+         CALCULE UM DESCONTO DE 5%. AO FINAL, INFORME O VALOR DESDE PRODUTO JÁ COM O DESCONTO
+        */
+
+        let precoProduto, valorDesconto, precoFinalproduto;
+        const taxaDesconto = 0.05;
+
+        precoProduto = parseFloat(prompt("Informe o valor do produto:"));
+        valorDesconto = precoProduto*taxaDesconto;
+        precoFinalproduto = precoProduto - valorDesconto;
+
+        document.write("O valor inicial do produto é R$", precoProduto.toFixed(2), "<br>");
+        document.write("Você teve um desconto de 5% equivalente a R$", valorDesconto.toFixed(2),"<br>")
+        document.write("O valor do produto com desconto é de R$ ", precoFinalproduto.toFixed(2))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Faça um programa que leia números  maiores que zero. Quando for inserido o número zero, o
+        //programa deverá apresentar quantos números foram inseridos, a soma de todos eles e a média destes
+
+        let numero;
+        let soma = 0;
+        let media = 0;
+
+        do {
+
+            numero = parseFloat(prompt("Digite um número maior que 0 para sair"));
+
+
+            if (numero > 0) {
+                soma += numero;
+                media++
+            }
+        } while (numero > 0)
+        if (media > 0) {
+            media = soma / media
+
+            document.write("Quantidade de números digitados :" + media);
+            document.write(" Soma dos números: " + soma);
+            document.write(" media dos numeros" + media.toFixed(2))
+
+
+        } else {
+            document.write("Digite um número válido")
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

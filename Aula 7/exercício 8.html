@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Crie uma função que calcule a media de duas notas de 3 alunos
+
+        // Função para retornar a maior nota entre prova e recuperação
+        function obterMaiorNota(notaProva, notaRecuperacao) {
+            return notaProva > notaRecuperacao ? notaProva : notaRecuperacao;
+        }
+
+
+        let nomeAluno1 = prompt("Digite o nome do aluno 1:");
+        let notaProva1 = Number(prompt("Digite a nota da prova do aluno 1:"));
+        let notaRecuperacao1 = Number(prompt("Digite a nota de recuperação do aluno 1:"));
+        let notaFinal1 = obterMaiorNota(notaProva1, notaRecuperacao1);
+
+
+        let nomeAluno2 = prompt("Digite o nome do aluno 2:");
+        let notaProva2 = Number(prompt("Digite a nota da prova do aluno 2:"));
+        let notaRecuperacao2 = Number(prompt("Digite a nota de recuperação do aluno 2:"));
+        let notaFinal2 = obterMaiorNota(notaProva2, notaRecuperacao2);
+
+
+        let nomeAluno3 = prompt("Digite o nome do aluno 3:");
+        let notaProva3 = Number(prompt("Digite a nota da prova do aluno 3:"));
+        let notaRecuperacao3 = Number(prompt("Digite a nota de recuperação do aluno 3:"));
+        let notaFinal3 = obterMaiorNota(notaProva3, notaRecuperacao3);
+
+
+        document.write("Boletim dos Alunos: <br>");
+
+        document.write("Aluno 1: <br>");
+        document.write("Nome: " + nomeAluno1 + "<br>");
+        document.write("Nota da Prova: " + notaProva1 + "<br>");
+        document.write("Nota de Recuperação: " + notaRecuperacao1 + "<br>");
+        document.write("Nota Final no Boletim: " + notaFinal1 + "<br><br>");
+
+        document.write("Aluno 2: <br>");
+        document.write("Nome: " + nomeAluno2 + "<br>");
+        document.write("Nota da Prova: " + notaProva2 + "<br>");
+        document.write("Nota de Recuperação: " + notaRecuperacao2 + "<br>");
+        document.write("Nota Final no Boletim: " + notaFinal2 + "<br><br>");
+
+        document.write("Aluno 3: <br>");
+        document.write("Nome: " + nomeAluno3 + "<br>");
+        document.write("Nota da Prova: " + notaProva3 + "<br>");
+        document.write("Nota de Recuperação: " + notaRecuperacao3 + "<br>");
+        document.write("Nota Final no Boletim: " + notaFinal3);
+
+    </script>
+</body>
+
+</html>

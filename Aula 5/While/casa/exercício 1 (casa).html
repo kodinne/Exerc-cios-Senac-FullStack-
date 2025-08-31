@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:_ApprovalStatus msdt:dt="string">0</mso:_ApprovalStatus>
+<mso:_ApprovalAssignedTo msdt:dt="string"></mso:_ApprovalAssignedTo>
+<mso:_ApprovalRespondedBy msdt:dt="string"></mso:_ApprovalRespondedBy>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <script>
+        //Construir um programa no qual o usuário digitará um número entre 1 e 12 e o sistema retornará, na tela, qual mês corresponde a esse número
+
+        let numero = parseInt(prompt("Digite um numero de 1 a 12"));
+        while (numero < 1 || numero > 12) {
+            numero = parseInt(prompt("Número inválido. Digite um número entre 1 e 12"));
+
+        }
+
+        if (numero === 1) {
+  document.write("Janeiro");
+} else if (numero === 2) {
+  document.write("Fevereiro");
+} else if (numero === 3) {
+  document.write("Março");
+} else if (numero === 4) {
+  document.write("Abril");
+} else if (numero === 5) {
+  document.write("Maio");
+} else if (numero === 6) {
+  document.write("Junho");
+} else if (numero === 7) {
+  document.write("Julho");
+} else if (numero === 8) {
+  document.write("Agosto");
+} else if (numero === 9) {
+  document.write("Setembro");
+} else if (numero === 10) {
+  document.write("Outubro");
+} else if (numero === 11) {
+  document.write("Novembro");
+} else if (numero === 12) {
+  document.write("Dezembro");
+}
+
+    </script>
+    
+</body>
+</html>

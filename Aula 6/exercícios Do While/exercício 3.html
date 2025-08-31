@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Faça uma programa que leia dois números. Crie um menu com 3 opções (ex: 1 - Soma, 2 - Subtração, 3 - Sair). realize o calculo de acordo com a operação escolhida pelo usuário.
+        // Repita o menu até o usuário escolher a opção "Sair".
+
+        let numero1, numero2;
+        let opcao;
+
+        numero1 = parseFloat(prompt("Digite o primeiro número: "));
+        numero2 = parseFloat(prompt("Digite o segundo número: "))
+        do {
+            opcao = prompt(
+                "Menu:\n" +
+                "1 - soma\n" +
+                "2 - subtração\n" +
+                "3 - Sair\n" +
+                "Escolha uma opção:")
+
+
+            if (opcao == 1) {
+                document.write("A soma é: ", numero1 + numero2)
+            } else if (opcao == 2) {
+
+                document.write("A subtração é: ", numero1 - numero2);
+            } else (opcao == 3)
+
+        } while (opcao == 3) {
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

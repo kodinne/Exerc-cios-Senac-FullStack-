@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //Mostre uma contagem regressiva de 10 até 1, depois pergunte se o usuário quer repetir a contagem. Repita enquanto a resposta for “sim”.  
+
+        let resposta;
+
+        do {
+            for (let i = 10; i >= 1; i--) {
+                document.write(i + "<br>");
+            }
+
+            resposta = prompt("Deseja repetir a contagem? Sim ou Não?").toLowerCase();
+
+        } while (resposta === "sim");
+
+        document.write("Contagem encerrada.");
+
+
+    </script>
+</body>
+
+</html>

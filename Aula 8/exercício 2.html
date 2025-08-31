@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Construir um programa no qual ele escreverá, na tela, todos os valores de um vetor com cinco elementos numéricos.
+        // O usuário deste programa escolherá um desses elementos e deverá trocar
+        //o valor por um outro número digitado. Exemplo: Valores do vetor 9, 3, 2, 6, 8 Qual posição do vetor você quer alterar? <<Usuário digita um número, exemplo 0 >>.
+        //Qual número você quer inserir? <<Usuário digita o valor, exemplo 5>>. O vetor agora é composto por 5, 3, 2, 6, 8. Exemplo:
+        //Valores do vetor 9, 3, 2, 6, 8. Qual posição do vetor você quer alterar ? << Usuário digita um número, exemplo 0 >>.
+        //Qual número você quer inserir ? << Usuário digita o valor, exemplo 5 >>. O vetor agora é composto por 5, 3, 2, 6, 8.
+
+        let vetor = [9, 3, 2, 6, 8];
+
+        document.write("Valores do vetor: " + vetor.join(", "));
+
+        let posicao = parseInt(prompt("Qual posição do vetor você quer alterar? (0 a 4)"));
+
+        if (posicao >= 0 && posicao < vetor.length) {
+            let novoValor = parseInt(prompt("Qual número você quer inserir?"));
+            vetor[posicao] = novoValor;
+            document.write("O vetor agora é composto por: " + vetor.join(", "));
+        } else {
+            document.write("Posição inválida! Escolha um número entre 0 e 4.");
+        }
+
+    </script>
+</body>
+
+</html>

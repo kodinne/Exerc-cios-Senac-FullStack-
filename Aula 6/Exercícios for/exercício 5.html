@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Peça uma palavra ao usuário e use for para percorrer cada caractere e contar quantas vogais ela contém.
+
+        let palavra = prompt("Digite uma palavra para saber quantas vogais ela tem");
+        let totalVogais = 0;
+
+        for (let i = 0; i < palavra.length; i++) {
+            let letra = palavra[i];
+            if (
+                letra === "a" || letra === "e" ||
+                letra === "i" || letra === "o" || letra === "u"
+            ) {
+                totalVogais++;
+            }
+        }
+
+        document.write("A palavra " + palavra + " possui " + totalVogais + " vogais.");
+
+    </script>
+</body>
+
+</html>
